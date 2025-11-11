@@ -574,7 +574,26 @@
       setInterval(updateCountdown, 1000);
     })();
   </script>
+<script>
+    (function() {
+      const header = document.querySelector('header');
+      if (!header) return;
+
+      function fadeHeaderOnScroll() {
+        const maxScroll = 300; // distanza in px dopo la quale l’header è semi-trasparente
+        const y = window.scrollY;
+        const progress = Math.min(y / maxScroll, 1);
+        const opacity = 1 - (progress * 1); // più alto = più trasparente
+
+        header.style.opacity = opacity;
+      }
+
+      fadeHeaderOnScroll();
+      window.addEventListener('scroll', fadeHeaderOnScroll);
+    })();
+  </script>
 
 </body>
 </html>
+
 
