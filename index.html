@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carmine & Antonetta - 17 Luglio 2026</title>
+  <meta name="description" content="Partecipazione di matrimonio di Carmine e Antonetta - 17 Luglio 2026." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --champagne: #f6eee3;
+      --champagne-soft: #fbf6ee;
+      --gold-soft: #d4b28c;
+      --dark: #4a3b32;
+      --accent: #ffffff;
+      --rose-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --radius-xl: 24px;
+      --transition: all 0.3s ease;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--champagne-soft);
+      color: var(--dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--gold-soft); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Layout base */
+    .wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    header {
+      background: radial-gradient(circle at top, #ffffff, var(--champagne));
+      border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+      padding: 32px 16px 40px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(6px);
+    }
+
+    .hero {
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .names {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      letter-spacing: 1px;
+      color: var(--dark);
+    }
+
+    .ampersand {
+      color: var(--gold-soft);
+      margin: 0 4px;
+    }
+
+    .date {
+      margin-top: 6px;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+    }
+
+    nav {
+      margin-top: 14px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,178,140,0.5);
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(4px);
+      transition: var(--transition);
+    }
+
+    nav a:hover {
+      background: var(--gold-soft);
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Sezioni */
+    section {
+      margin: 32px 0;
+      padding: 24px 18px;
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--rose-shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 120px;
+      height: 120px;
+      background: url('https://images.pexels.com/photos/931162/pexels-photo-931162.jpeg?auto=compress&cs=tinysrgb&w=400') no-repeat center/cover;
+      opacity: 0.06;
+      transform: rotate(-8deg);
+      pointer-events: none;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+
+    .subtitle {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--gold-soft);
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    .center { text-align: center; }
+
+    /* Countdown */
+    #countdown {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .count-box {
+      padding: 8px 10px;
+      min-width: 60px;
+      border-radius: 16px;
+      background: var(--champagne-soft);
+      border: 1px solid rgba(212,178,140,0.4);
+      font-size: 0.75rem;
+    }
+
+    .count-number {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    /* Cards per luoghi */
+    .card {
+      margin-top: 10px;
+      padding: 14px 12px;
+      border-radius: 18px;
+      border: 1px solid rgba(212,178,140,0.35);
+      background: var(--champagne-soft);
+      font-size: 0.9rem;
+    }
+
+    .card strong {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.8rem;
+      cursor: pointer;
+      background: var(--gold-soft);
+      color: #fff;
+      transition: var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn:hover {
+      box-shadow: 0 6px 14px rgba(0,0,0,0.16);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--gold-soft);
+      border: 1px solid var(--gold-soft);
+    }
+
+    .btn-outline:hover {
+      background: var(--gold-soft);
+      color: #fff;
+    }
+
+    /* Galleria */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      transition: var(--transition);
+    }
+
+    .gallery img:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+    }
+
+    /* RSVP Form */
+    form {
+      margin-top: 6px;
+      display: grid;
+      gap: 8px;
+    }
+
+    label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(212,178,140,0.6);
+      font-size: 0.85rem;
+      outline: none;
+      transition: var(--transition);
+      background: #fff;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      box-shadow: 0 0 0 2px rgba(212,178,140,0.25);
+    }
+
+    textarea {
+      min-height: 60px;
+      resize: vertical;
+    }
+
+    .form-row-inline {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 8px;
+    }
+
+    .note {
+      font-size: 0.75rem;
+      color: #7c6a5a;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      padding: 18px 8px 26px;
+      color: #7c6a5a;
+    }
+
+    /* Musica info */
+    .music-note {
+      font-size: 0.72rem;
+      margin-top: 4px;
+      color: #a08a79;
+    }
+
+    /* Responsive migliorato */
+    @media (min-width: 768px) {
+      header { padding: 26px 16px 30px; }
+      .names { font-size: 3rem; }
+      .date { font-size: 0.9rem; }
+      section { padding: 26px 24px; margin: 34px 0; }
+      h2 { font-size: 1.6rem; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrapper hero">
+      <div class="names">
+        Carmine <span class="ampersand">&</span> Antonetta
+      </div>
+      <div class="date">17 Luglio 2026 · Grumo Nevano & Grottaminarda</div>
+
+      <div id="countdown"></div>
+
+      <nav>
+        <a href="#invito">Invito</a>
+        <a href="#cerimonia">Cerimonia</a>
+        <a href="#ricevimento">Ricevimento</a>
+        <a href="#foto">Foto</a>
+        <a href="#rsvp">RSVP</a>
+        <a href="#regali">Lista Nozze</a>
+        <a href="#info">Info Utili</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrapper">
+
+    <!-- Invito -->
+    <section id="invito">
+      <div class="subtitle">Siete invitati</div>
+      <h2 class="center">Con gioia vi annunciamo il nostro sì</h2>
+      <p class="center">
+        Carmine e Antonetta sono felici di condividere con voi il giorno in cui diranno
+        <strong>"per sempre"</strong>.
+      </p>
+      <p class="center">
+        Tra una promessa seria e qualche risata fuori programma, ci piacerebbe avervi accanto
+        per riempire di affetto, abbracci e brindisi il nostro grande giorno.
+      </p>
+      <p class="center">
+        Vi aspettiamo il <strong>17 Luglio 2026</strong> per celebrare insieme questo mondo a parte
+        che stiamo costruendo mano nella mano. 💍
+      </p>
+    </section>
+
+    <!-- Cerimonia -->
+    <section id="cerimonia">
+      <div class="subtitle">La cerimonia</div>
+      <h2>Basilica Pontificia di San Tammaro Vescovo</h2>
+      <div class="card">
+        <p><strong>Ora:</strong> 10:30</p>
+        <p><strong>Indirizzo:</strong> Piazza Papa Pio XII, 4, 80028 Grumo Nevano (NA)</p>
+        <p>
+          Vi chiediamo di arrivare con qualche minuto di anticipo:
+          promesso, non vi faremo aspettare troppo all’altare. 😉
+        </p>
+        <a class="btn" target="_blank"
+           href="https://www.google.com/maps/search/?api=1&query=Basilica+Pontificia+di+San+Tammaro+Vescovo+Grumo+Nevano">
+          Apri su Google Maps
+        </a>
+      </div>
+    </section>
+
+    <!-- Ricevimento -->
+    <section id="ricevimento">
+      <div class="subtitle">Il ricevimento</div>
+      <h2>Villa Regina Ricevimenti</h2>
+      <div class="card">
+        <p><strong>Ora:</strong> 14:00</p>
+        <p><strong>Indirizzo:</strong> Via Piani, 83035 Grottaminarda (AV)</p>
+        <p>
+          Dopo le emozioni in Basilica, continueremo la festa tra brindisi, buona cucina e tante sorprese.
+        </p>
+        <a class="btn" target="_blank"
+           href="https://www.google.com/maps/search/?api=1&query=Villa+Regina+Ricevimenti+Grottaminarda">
+          Apri su Google Maps
+        </a>
+      </div>
+    </section>
+
+    <!-- Foto -->
+    <section id="foto">
+      <div class="subtitle">Qualche scatto</div>
+      <h2>In attesa del grande giorno</h2>
+      <p>
+        Una piccola anteprima del nostro percorso insieme.
+      </p>
+      <div class="gallery">
+        <!-- Sostituite questi src con le vostre foto reali -->
+        <img src="https://images.pexels.com/photos/1405753/pexels-photo-1405753.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Noi 1">
+        <img src="https://images.pexels.com/photos/2959202/pexels-photo-2959202.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Noi 2">
+        <img src="https://images.pexels.com/photos/2788492/pexels-photo-2788492.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Noi 3">
+        <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Noi 4">
+      </div>
+      <p class="note">
+        (Potete sostituire le immagini con le vostre foto caricandole nella stessa cartella e cambiando i link.)
+      </p>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp">
+      <div class="subtitle">Conferma presenza</div>
+      <h2>RSVP & Intolleranze</h2>
+      <p>
+        Per aiutarci ad organizzare al meglio, vi chiediamo gentilmente di confermare la vostra presenza
+        e segnalare eventuali esigenze alimentari.
+      </p>
+
+      <!--
+        Per far funzionare il form:
+        - Opzione semplice: usare Formspree, Basin o un servizio simile e sostituire l'attributo "action".
+        - Oppure cambiare in "mailto:la_vostra_email" (meno elegante, apre il client email).
+      -->
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="form-row-inline">
+          <div>
+            <label for="nome">Nome e Cognome*</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+          <div>
+            <label for="ospiti">Numero totale partecipanti*</label>
+            <input type="number" id="ospiti" name="ospiti" min="1" max="10" required />
+          </div>
+        </div>
+
+        <div class="form-row-inline">
+          <div>
+            <label for="cerimonia-presenza">Parteciperai alla cerimonia?*</label>
+            <select id="cerimonia-presenza" name="cerimonia_presenza" required>
+              <option value="">Seleziona</option>
+              <option value="si">Sì</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div>
+            <label for="ricevimento-presenza">Parteciperai al ricevimento?*</label>
+            <select id="ricevimento-presenza" name="ricevimento_presenza" required>
+              <option value="">Seleziona</option>
+              <option value="si">Sì</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="intolleranze">Intolleranze, allergie o preferenze alimentari</label>
+          <textarea id="intolleranze" name="intolleranze"
+            placeholder="Es: celiachia, allergia alla frutta secca, vegetariano, vegano, ecc."></textarea>
+        </div>
+
+        <div>
+          <label for="messaggio">Messaggio per gli sposi</label>
+          <textarea id="messaggio" name="messaggio"
+            placeholder="Se volete lasciarci un pensiero o una battuta, questo è il posto giusto."></textarea>
+        </div>
+
+        <button type="submit" class="btn">Invia RSVP</button>
+        <p class="note">
+          In alternativa puoi confermare scrivendoci direttamente su WhatsApp dal pulsante qui sotto.
+        </p>
+      </form>
+
+      <!-- WhatsApp -->
+      <a class="btn btn-outline"
+         href="https://wa.me/3936189193?text=Ciao%20Carmine%20e%20Antonetta,%20confermiamo%20la%20nostra%20presenza%20al%2017%20luglio%202026!"
+         target="_blank">
+        Scrivici su WhatsApp
+      </a>
+      <p class="note">
+      </p>
+    </section>
+
+    <!-- Lista Nozze / Regali -->
+    <section id="regali">
+      <div class="subtitle">Per chi lo desidera</div>
+      <h2>Lista Nozze & Regalo</h2>
+      <p>
+        Il regalo più bello sarà avervi con noi nel nostro giorno speciale.
+      </p>
+      <p>
+        Se desiderate contribuire al nostro viaggio o a un progetto che abbiamo nel cuore,
+        trovate qui le informazioni:
+      </p>
+      <ul style="font-size:0.9rem; margin-left:16px;">
+        <li>IBAN: <strong>IT00 X000 0000 0000 0000 0000 000</strong> (intestato a Carmine e Antonetta)</li>
+        <li>Oppure lista nozze presso: <strong>[Nome negozio / Agenzia Viaggi]</strong></li>
+      </ul>
+      <p class="note">
+        (Potete modificare questi dati con le vostre info reali.)
+      </p>
+    </section>
+
+    <!-- Info Utili -->
+    <section id="info">
+      <div class="subtitle">Info Utili</div>
+      <h2>Dress code, bambini & altre note</h2>
+      <p><strong>Dress code:</strong> elegante, colori chiari e delicati sono i benvenuti. 🌿</p>
+      <p><strong>Bambini:</strong> i piccoli ospiti sono i benvenuti, ci saranno spazi dedicati.</p>
+      <p><strong>Pernottamento:</strong> per chi viene da lontano, possiamo suggerire strutture in zona Grottaminarda.</p>
+      <p class="note">
+        Per qualsiasi dubbio potete contattarci via WhatsApp o telefono.
+      </p>
+
+      <!-- Musica -->
+      <div class="card">
+        <p><strong>Colonna sonora:</strong> "Un mondo a parte" - Jovanotti</p>
+        <p class="music-note">
+          La riproduzione automatica dipende dal dispositivo: se vuoi, premi play qui sotto.
+        </p>
+        <!-- TODO: sostituire con embed legale da YouTube/Spotify -->
+        <iframe style="border-radius:14px; width:100%; height:80px; border:none; margin-top:6px;"
+          src="https://open.spotify.com/embed/track/0Zx0L0bZXLh0PqWGWpZJYG"
+          loading="lazy"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Carmine & Antonetta · 17.07.2026<br/>
+    Grazie per essere parte del nostro giorno speciale 🤍
+  </footer>
+
+  <!-- Countdown Script -->
+  <script>
+    (function() {
+      const countdown = document.getElementById('countdown');
+      const weddingDate = new Date('2026-07-17T10:30:00+02:00').getTime();
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+
+        if (distance <= 0) {
+          countdown.innerHTML = '<div class="count-box"><span class="count-number">Oggi</span>È il grande giorno! 🎉</div>';
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((distance / (1000 * 60)) % 60);
+        const seconds = Math.floor((distance / 1000) % 60);
+
+        countdown.innerHTML = `
+          <div class="count-box">
+            <span class="count-number">${days}</span>giorni
+          </div>
+          <div class="count-box">
+            <span class="count-number">${hours}</span>ore
+          </div>
+          <div class="count-box">
+            <span class="count-number">${minutes}</span>min
+          </div>
+          <div class="count-box">
+            <span class="count-number">${seconds}</span>sec
+          </div>
+        `;
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    })();
+  </script>
+
+</body>
+</html>
